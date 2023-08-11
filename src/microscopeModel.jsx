@@ -14,12 +14,12 @@ import { useGLTF } from "@react-three/drei";
 import Base from "./Base";
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF("/scene.gltf");
-  console.log(materials);
+  const { nodes, materials } = useGLTF("/1/scene.gltf");
   return (
+    <group 
+    {...props}
+    dispose={null}>
     <group
-      {...props}
-      dispose={null}
       rotation={[-Math.PI / 2, 0, -Math.PI / 8]}
       scale={props.zoom}
     >
@@ -29,54 +29,54 @@ export function Model(props) {
         rotation={[Math.PI / 2, 0, 0]}
         scale={[0.14, 0.14, 0.07]}
         geometry={nodes.Cylinder_0.geometry}
-        // material={materials.metal}
+        material={materials.metal}
       >
-        <meshPhongMaterial color={"blue"} />
+        {/* <meshPhongMaterial color={"blue"} /> */}
       </mesh>
       <mesh
         position={[-0.09, 2.03, 1.17]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={[0.14, 0.14, 0.07]}
         geometry={nodes.Cylinder001_0.geometry}
-        // material={materials.Root}
+        material={materials.Root}
       >
-        <meshPhongMaterial color={"red"} />
+        {/* <meshPhongMaterial color={"red"} /> */}
       </mesh>
       <mesh
         position={[-0.09, 2.22, 1.17]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={[0.14, 0.14, 0.07]}
         geometry={nodes.Cylinder002_0.geometry}
-        // material={materials.metal}
+        material={materials.metal}
       >
-        <meshPhongMaterial color={"purple"} />
+        {/* <meshPhongMaterial color={"purple"} /> */}
       </mesh>
       <mesh
         geometry={nodes.Cube006_0.geometry}
-        // material={materials["Material.003"]}
+        material={materials["Material.003"]}
         position={[1.2, 1.94, 1.76]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={[-1.08, 1.06, 0.06]}
       >
-        <meshPhongMaterial color={"white"} />
+        {/* <meshPhongMaterial color={"white"} /> */}
       </mesh>
       <mesh
         geometry={nodes.Cylinder003_0.geometry}
-        // material={materials.metal}
+        material={materials.metal}
         position={[0.91, 1.93, 3.39]}
         scale={[0.33, 0.33, 0.61]}
       >
-        <meshPhongMaterial color={"pink"} />
+        {/* <meshPhongMaterial color={"pink"} /> */}
       </mesh>
       <mesh
         geometry={nodes.Cylinder004_0.geometry}
-        // material={materials.black_plastic}
+        material={materials.black_plastic}
         position={[0.91, 1.93, 4.05]}
         scale={[0.35, 0.35, 0.05]}
       ></mesh>
       <mesh
         geometry={nodes.Cylinder005_0.geometry}
-        // material={materials.metal}
+        material={materials.metal}
         position={[0.11, 1.71, 2.91]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={[0.22, 0.22, 0.04]}
@@ -408,7 +408,8 @@ export function Model(props) {
         material={materials.metal}
       ></mesh>
     </group>
+    </group>
   );
 }
 
-useGLTF.preload("/scene.gltf");
+useGLTF.preload("/1/scene.gltf");

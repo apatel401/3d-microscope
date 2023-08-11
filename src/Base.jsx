@@ -9,7 +9,7 @@ const Base = () => {
       scale={[1.66, 1.42, 0.15]}
     >
       <mesh geometry={nodes.Cube002_0.geometry} material={materials.metal}>
-        <meshPhongMaterial color={"red"} />
+        {/* <meshPhongMaterial color={"red"} /> */}
       </mesh>
     </group>
   );
