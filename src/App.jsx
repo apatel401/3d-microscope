@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unknown-property */
 import { Suspense, useState, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Model } from "./microscopeModel";
+import { Model } from "./microscope/microscopeModel";
 import UtilLights from "./UtilLights";
 
 function App() {

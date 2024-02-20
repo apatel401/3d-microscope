@@ -24,15 +24,14 @@ export function Model(props) {
       scale={props.zoom}
     >
       <Base />
-      <mesh
+      {/* <mesh
         position={[-0.09, 1.63, 1.17]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={[0.14, 0.14, 0.07]}
         geometry={nodes.Cylinder_0.geometry}
         material={materials.metal}
       >
-        {/* <meshPhongMaterial color={"blue"} /> */}
-      </mesh>
+      </mesh> */}
       <mesh
         position={[-0.09, 2.03, 1.17]}
         rotation={[Math.PI / 2, 0, 0]}
@@ -40,7 +39,7 @@ export function Model(props) {
         geometry={nodes.Cylinder001_0.geometry}
         material={materials.Root}
       >
-        {/* <meshPhongMaterial color={"red"} /> */}
+        <meshPhongMaterial color={"red"} />
       </mesh>
       <mesh
         position={[-0.09, 2.22, 1.17]}
